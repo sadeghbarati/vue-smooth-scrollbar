@@ -68,6 +68,9 @@
   "dependencies": {
     "vue-demi": "^0.13.1"
   },
+  "optionalDependencies": {
+    "gsap": "^3.10.4"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "latest",
     "@commitlint/cli": "latest",

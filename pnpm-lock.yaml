@@ -9,6 +9,7 @@ specifiers:
   commitizen: ^4.2.4
   cz-conventional-changelog: ^3.3.0
   eslint: ^8.17.0
+  gsap: ^3.10.4
   jsdom: ^19.0.0
   rimraf: ^3.0.2
   smooth-scrollbar: ^8.7.4
@@ -22,6 +23,9 @@ specifiers:
 
 dependencies:
   vue-demi: 0.13.1_vue@3.2.37
+
+optionalDependencies:
+  gsap: 3.10.4
 
 devDependencies:
   '@antfu/eslint-config': 0.25.1_ud6rd4xtew5bv4yhvkvu24pzm4
@@ -2426,6 +2430,12 @@ packages:
   /graceful-fs/4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
     dev: true
+
+  /gsap/3.10.4:
+    resolution: {integrity: sha512-6QatdkKxXCMfvCW4rM++0RqyLQAzFX5nwl3yHS0XPgkZBkiSEY3VZVbMltrdtsbER/xZonLtyHt684wRp4erlQ==}
+    requiresBuild: true
+    dev: false
+    optional: true
 
   /hard-rejection/2.1.0:
     resolution: {integrity: sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==}
