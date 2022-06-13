@@ -1,6 +1,6 @@
 {
-  "name": "@logustra/vivu-npm",
-  "version": "0.1.4",
+  "name": "vue-smooth-scrollbar",
+  "version": "0.0.1",
   "description": "Starter template to build component library for vue.js 2-3",
   "keywords": [
     "starter",
@@ -12,28 +12,25 @@
     "frontend"
   ],
   "license": "MIT",
-  "author": "Faizal Andyka",
+  "author": "Sadegh Barati",
   "repository": {
     "type": "git",
-    "url": "https://github.com/logustra/vivu-npm"
+    "url": "https://github.com/sadeghbarati/vue-smooth-scrollbar"
   },
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
   "types": "./dist/types/index.d.ts",
-  "unpkg": "./dist/index.umd.js",
-  "jsdelivr": "./dist/index.umd.js",
   "exports": {
     ".": {
       "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+      "require": "./dist/index.cjs.js"
     }
   },
   "files": [
     "dist"
   ],
-  "bugs": "https://github.com/logustra/vivu-npm/issues",
+  "bugs": "https://github.com/sadeghbarati/vue-smooth-scrollbar/issues",
   "scripts": {
-    "prepare": "husky install",
     "clean:dist": "rimraf dist",
     "clean:coverage": "rimraf coverage",
     "dev": "vite --mode dev",
@@ -50,36 +47,41 @@
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.4.9",
-    "vue": "^2.0.0 || >=3.0.0"
+    "vue": "^2.0.0 || >=3.0.0",
+    "smooth-scrollbar": "8.7.4"
   },
   "peerDependenciesMeta": {
     "@vue/composition-api": {
       "optional": true
     }
   },
+  "gitHooks": {
+    "commit-msg": "npx --no-install commitlint --edit $1",
+    "pre-commit": "pnpm lint",
+    "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+  },
   "dependencies": {
-    "vue-demi": "^0.12.1"
+    "vue-demi": "^0.13.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.18.9",
-    "@commitlint/cli": "^16.2.3",
-    "@commitlint/config-conventional": "^16.2.1",
-    "@types/node": "^17.0.21",
-    "@vitejs/plugin-vue": "^2.2.0",
-    "c8": "^7.11.0",
+    "@antfu/eslint-config": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@types/node": "^17.0.42",
+    "@vitejs/plugin-vue": "latest",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.11.0",
-    "happy-dom": "^2.49.0",
-    "husky": "^7.0.4",
+    "eslint": "^8.17.0",
+    "jsdom": "^19.0.0",
     "rimraf": "^3.0.2",
-    "typescript": "^4.5.4",
-    "vite": "^2.8.0",
-    "vitest": "^0.7.6",
-    "vue": "^3.2.31",
-    "vue-tsc": "^0.29.8"
+    "typescript": "^4.7.3",
+    "vite": "^2.9.12",
+    "vitest": "^0.14.2",
+    "vue": "^3.2.37",
+    "vue-tsc": "^0.37.5",
+    "yorkie": "^2.0.0"
   },
-  "volta": {
-    "node": "14.19.1"
+  "engines": {
+    "node": ">=16.13.2"
   }
 }
