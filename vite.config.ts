@@ -90,7 +90,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: [
         {
-          find: '@',
+          find: '~',
           replacement: resolve(__dirname, './src'),
         },
       ],
