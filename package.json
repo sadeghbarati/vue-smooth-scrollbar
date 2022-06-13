@@ -38,7 +38,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "pnpm clean:coverage && vitest --coverage --mode test"
+    "test": "pnpm clean:coverage && vitest --coverage --mode test",
+    "commit": "cz"
   },
   "config": {
     "commitizen": {
@@ -58,7 +59,7 @@
   "gitHooks": {
     "commit-msg": "npx --no-install commitlint --edit $1",
     "pre-commit": "pnpm lint",
-    "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    "prepare-commit-msg": "exec < /dev/tty && np --hook || true"
   },
   "dependencies": {
     "vue-demi": "^0.13.1"
